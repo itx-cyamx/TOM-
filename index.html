@@ -1,0 +1,1862 @@
+# TOM-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Message From My Heart — Nafisha</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Pacifico&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    overflow:hidden;
+    font-family:'Baloo 2',cursive;
+    background:#ffd1df;
+    color:#5b4350;
+}
+
+/* =========================
+   COMMON
+========================= */
+
+.page{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:none;
+    overflow:hidden;
+}
+
+.page.active{
+    display:block;
+    animation:pageIn .7s ease;
+}
+
+@keyframes pageIn{
+    from{
+        opacity:0;
+        transform:scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.inner{
+    width:100%;
+    max-width:440px;
+    height:100%;
+    margin:auto;
+    position:relative;
+    padding:25px 20px;
+    text-align:center;
+}
+
+.messageHeading{
+    position:absolute;
+    top:17px;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-family:'Pacifico',cursive;
+    font-size:24px;
+    color:#a64c70;
+    z-index:20;
+}
+
+button{
+    font-family:inherit;
+    border:none;
+    cursor:pointer;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floatingHearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:50;
+}
+
+.heart{
+    position:absolute;
+    bottom:-40px;
+    animation:heartFloat linear forwards;
+}
+
+@keyframes heartFloat{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.85;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(35deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   PAGE 1
+========================= */
+
+#page1{
+    background:
+        radial-gradient(circle at 10% 20%,rgba(255,255,255,.45),transparent 20%),
+        radial-gradient(circle at 90% 80%,rgba(255,255,255,.4),transparent 25%),
+        linear-gradient(150deg,#ffb8cf,#ffdce8,#ffc4d8);
+}
+
+.page1Content{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top:75px;
+}
+
+.page1Title{
+    font-family:'Pacifico',cursive;
+    color:#fff;
+    font-size:39px;
+    line-height:1.25;
+    text-shadow:
+        0 3px 0 #df7197,
+        0 8px 20px rgba(140,50,80,.2);
+}
+
+.duduSticker{
+    margin-top:22px;
+    width:245px;
+    height:230px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+/* cute Dudu Bubu inspired sticker */
+
+.dudu{
+    position:relative;
+    width:210px;
+    height:180px;
+}
+
+.bear{
+    position:absolute;
+    width:90px;
+    height:105px;
+    border-radius:48%;
+    bottom:20px;
+}
+
+.bear .ear{
+    position:absolute;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    top:-14px;
+}
+
+.bear .eye{
+    position:absolute;
+    width:7px;
+    height:9px;
+    background:#222;
+    border-radius:50%;
+    top:43px;
+}
+
+.bear .nose{
+    position:absolute;
+    width:13px;
+    height:9px;
+    background:#333;
+    border-radius:50%;
+    top:56px;
+    left:38px;
+}
+
+.duduBear{
+    left:8px;
+    background:#fffdf9;
+    transform:rotate(-7deg);
+    box-shadow:inset -7px -5px 15px rgba(0,0,0,.06);
+}
+
+.duduBear .ear{
+    background:#fffdf9;
+}
+
+.duduBear .ear.left{
+    left:5px;
+}
+
+.duduBear .ear.right{
+    right:5px;
+}
+
+.duduBear .eye.left{
+    left:28px;
+}
+
+.duduBear .eye.right{
+    right:28px;
+}
+
+.bubuBear{
+    right:8px;
+    background:#27242a;
+    transform:rotate(7deg);
+    box-shadow:inset -8px -5px 15px rgba(255,255,255,.05);
+}
+
+.bubuBear .ear{
+    background:#27242a;
+}
+
+.bubuBear .ear.left{
+    left:5px;
+}
+
+.bubuBear .ear.right{
+    right:5px;
+}
+
+.bubuBear .eye{
+    background:white;
+}
+
+.bubuBear .eye.left{
+    left:28px;
+}
+
+.bubuBear .eye.right{
+    right:28px;
+}
+
+.bubuBear .nose{
+    background:#fff;
+}
+
+.duduText{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    background:#fff;
+    color:#e25788;
+    padding:5px 16px;
+    border-radius:20px;
+    font-size:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    white-space:nowrap;
+}
+
+.excited{
+    margin-top:10px;
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+    text-shadow:0 2px 8px rgba(130,40,70,.15);
+}
+
+.yesNo{
+    margin-top:18px;
+    display:flex;
+    gap:18px;
+}
+
+.yesNo button{
+    width:100px;
+    padding:10px 0;
+    border-radius:30px;
+    font-size:16px;
+    color:#fff;
+    background:#e96798;
+    box-shadow:0 7px 15px rgba(180,60,110,.2);
+    transition:.25s;
+}
+
+.yesNo button:hover{
+    transform:scale(1.08);
+}
+
+.yesNo .no{
+    background:#fff;
+    color:#d45b89;
+}
+
+/* =========================
+   PAGE 2 BALLOONS
+========================= */
+
+#page2{
+    background:#fff;
+}
+
+#page2 .messageHeading{
+    color:#b24c75;
+}
+
+.balloonTitle{
+    padding-top:70px;
+    font-family:'Pacifico',cursive;
+    font-size:34px;
+    color:#d75b88;
+    line-height:1.3;
+}
+
+.balloonArea{
+    position:relative;
+    height:470px;
+    width:100%;
+    margin-top:10px;
+}
+
+/* DOUBLE WRITING POP UP */
+
+.doubleWord{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-family:'Pacifico',cursive;
+    font-size:35px;
+    color:#d65c89;
+    opacity:0;
+    pointer-events:none;
+    white-space:nowrap;
+    text-shadow:
+        2px 2px 0 #ffd3e2,
+        -2px -2px 0 #fff0f5;
+}
+
+.doubleWord.show{
+    animation:doublePop .9s ease forwards;
+}
+
+@keyframes doublePop{
+    0%{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(.3);
+    }
+
+    45%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1.2);
+    }
+
+    100%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+    }
+}
+
+/* balloons */
+
+.balloon{
+    position:absolute;
+    width:82px;
+    height:105px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.2s;
+    box-shadow:
+        inset -9px -12px 15px rgba(0,0,0,.08),
+        inset 9px 7px 15px rgba(255,255,255,.5),
+        0 8px 20px rgba(0,0,0,.1);
+}
+
+.balloon:hover{
+    transform:scale(1.08);
+}
+
+.balloon:after{
+    content:"";
+    position:absolute;
+    width:1px;
+    height:110px;
+    background:#aaa;
+    top:102px;
+    left:41px;
+}
+
+.balloon:before{
+    content:"";
+    position:absolute;
+    width:13px;
+    height:13px;
+    bottom:-5px;
+    left:35px;
+    background:inherit;
+    transform:rotate(45deg);
+}
+
+.shine{
+    position:absolute;
+    top:16px;
+    left:15px;
+    width:17px;
+    height:33px;
+    border-radius:50%;
+    background:rgba(255,255,255,.5);
+    transform:rotate(25deg);
+}
+
+.balloon1{
+    top:50px;
+    left:9%;
+    background:linear-gradient(145deg,#aee4ff,#62b6e8);
+}
+
+.balloon2{
+    top:50px;
+    right:9%;
+    background:linear-gradient(145deg,#ffd0e0,#f08db5);
+}
+
+.balloon3{
+    top:245px;
+    left:24%;
+    background:linear-gradient(145deg,#c6efd9,#70c9a1);
+}
+
+.balloon4{
+    top:245px;
+    right:24%;
+    background:linear-gradient(145deg,#ded0ff,#a38add);
+}
+
+.balloon.pop{
+    animation:balloonPop .5s ease forwards;
+    pointer-events:none;
+}
+
+@keyframes balloonPop{
+    0%{
+        transform:scale(1);
+    }
+    35%{
+        transform:scale(1.25);
+    }
+    100%{
+        transform:scale(0);
+        opacity:0;
+    }
+}
+
+.balloonCounter{
+    color:#aaa;
+    font-size:14px;
+}
+
+/* =========================
+   PAGE 3 CANDLE
+========================= */
+
+#page3{
+    background:
+        linear-gradient(
+            rgba(30,20,27,.68),
+            rgba(30,20,27,.72)
+        ),
+        radial-gradient(circle at center,#c87994,#49333d 70%);
+}
+
+#page3:before{
+    content:"";
+    position:absolute;
+    inset:-50px;
+    background:
+        radial-gradient(circle at 30% 30%,rgba(255,170,195,.15),transparent 25%),
+        radial-gradient(circle at 70% 70%,rgba(255,210,220,.1),transparent 25%);
+    filter:blur(20px);
+}
+
+.candleContent{
+    height:100%;
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+
+.candleTop{
+    font-family:'Pacifico',cursive;
+    font-size:27px;
+    margin-bottom:18px;
+}
+
+.candleCake{
+    width:190px;
+    height:150px;
+    position:relative;
+}
+
+.cakeBottom{
+    position:absolute;
+    bottom:0;
+    left:10px;
+    width:170px;
+    height:65px;
+    background:#ef9db9;
+    border-radius:12px 12px 22px 22px;
+    box-shadow:0 8px 0 #cf7899;
+}
+
+.cakeTop{
+    position:absolute;
+    bottom:45px;
+    left:23px;
+    width:145px;
+    height:55px;
+    background:#ffd0df;
+    border-radius:15px 15px 18px 18px;
+}
+
+.cakeCream{
+    position:absolute;
+    bottom:75px;
+    left:22px;
+    width:147px;
+    height:27px;
+    background:#fff;
+    border-radius:50%;
+}
+
+.candleStick{
+    position:absolute;
+    bottom:96px;
+    left:87px;
+    width:15px;
+    height:50px;
+    border-radius:4px;
+    background:#9f82dc;
+}
+
+.flame{
+    position:absolute;
+    bottom:138px;
+    left:84px;
+    width:22px;
+    height:31px;
+    background:#ffc94d;
+    border-radius:50% 50% 50% 0;
+    transform:rotate(-45deg);
+    box-shadow:0 0 25px #ffd76b;
+    animation:flameMove .55s infinite alternate;
+}
+
+@keyframes flameMove{
+    from{
+        transform:rotate(-45deg) scale(1);
+    }
+    to{
+        transform:rotate(-45deg) scale(1.12);
+    }
+}
+
+.flame.off{
+    opacity:0;
+}
+
+.blowText{
+    font-size:15px;
+    margin-top:7px;
+    color:#eee;
+}
+
+.blowButton{
+    margin-top:22px;
+    background:#ed78a4;
+    color:white;
+    padding:12px 26px;
+    border-radius:30px;
+    font-size:16px;
+    box-shadow:0 7px 20px rgba(0,0,0,.2);
+}
+
+.wishText{
+    display:none;
+    margin-top:20px;
+    font-size:21px;
+    font-family:'Pacifico',cursive;
+    color:#ffd9e6;
+}
+
+.wishText.show{
+    display:block;
+}
+
+/* =========================
+   PAGE 4 SIX MESSAGES
+========================= */
+
+#page4{
+    background:
+        radial-gradient(circle at center,rgba(255,230,238,.95),rgba(255,203,220,.82)),
+        #ffd2df;
+}
+
+.bouquet{
+    position:absolute;
+    left:50%;
+    top:48%;
+    transform:translate(-50%,-50%);
+    font-size:90px;
+    z-index:3;
+    filter:drop-shadow(0 10px 12px rgba(100,50,70,.15));
+}
+
+.messageBubble{
+    position:absolute;
+    max-width:145px;
+    padding:8px 11px;
+    background:#fff;
+    border-radius:15px;
+    font-size:13px;
+    line-height:1.25;
+    box-shadow:0 5px 15px rgba(80,40,60,.1);
+    z-index:5;
+    color:#7c5667;
+}
+
+.messageBubble:after{
+    content:"";
+    position:absolute;
+    width:9px;
+    height:9px;
+    background:#fff;
+    transform:rotate(45deg);
+}
+
+/* exact scattered arrangement */
+
+.m1{
+    top:20%;
+    left:5%;
+}
+
+.m1:after{
+    right:-4px;
+    bottom:7px;
+}
+
+.m2{
+    top:26%;
+    right:4%;
+}
+
+.m2:after{
+    left:-4px;
+    bottom:7px;
+}
+
+.m3{
+    top:56%;
+    left:3%;
+}
+
+.m3:after{
+    right:-4px;
+    top:8px;
+}
+
+.m4{
+    top:65%;
+    right:4%;
+}
+
+.m4:after{
+    left:-4px;
+    top:8px;
+}
+
+.m5{
+    bottom:10%;
+    left:12%;
+}
+
+.m5:after{
+    right:-4px;
+    top:8px;
+}
+
+.m6{
+    bottom:7%;
+    right:9%;
+}
+
+.m6:after{
+    left:-4px;
+    top:8px;
+}
+
+.continueBtn{
+    position:absolute;
+    bottom:27px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#d85d8b;
+    color:white;
+    padding:10px 28px;
+    border-radius:30px;
+    font-size:15px;
+    z-index:10;
+}
+
+/* =========================
+   PAGE 5 LONG MESSAGE
+========================= */
+
+#page5{
+    background:
+        radial-gradient(circle at 15% 20%,#ffe3ed,transparent 22%),
+        radial-gradient(circle at 85% 75%,#eee0ff,transparent 25%),
+        #fff;
+}
+
+.letterPage{
+    height:100%;
+    padding-top:68px;
+    padding-bottom:25px;
+    overflow-y:auto;
+    scrollbar-width:none;
+}
+
+.letterPage::-webkit-scrollbar{
+    display:none;
+}
+
+.letterTitle{
+    font-family:'Pacifico',cursive;
+    color:#d85d8b;
+    font-size:29px;
+}
+
+.letterCard{
+    margin-top:20px;
+    background:rgba(255,255,255,.88);
+    padding:25px 21px;
+    border-radius:25px;
+    box-shadow:0 10px 35px rgba(100,50,80,.1);
+    text-align:left;
+    font-size:15px;
+    line-height:1.75;
+    color:#66535c;
+}
+
+.letterCard .dear{
+    color:#c64e7e;
+    font-size:19px;
+    font-weight:600;
+}
+
+.teddy{
+    font-size:75px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.surpriseButton{
+    margin-top:18px;
+    width:100%;
+    padding:13px;
+    background:#ed77a4;
+    color:white;
+    border-radius:30px;
+    font-size:16px;
+    box-shadow:0 8px 20px rgba(200,70,120,.2);
+}
+
+/* =========================
+   PAGE 6 LAST SURPRISE
+========================= */
+
+#page6{
+    background:
+        radial-gradient(circle at 20% 20%,#ffe2ed,transparent 22%),
+        radial-gradient(circle at 80% 80%,#e9dcff,transparent 25%),
+        #fff;
+}
+
+.lastContent{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.lastTitle{
+    font-family:'Pacifico',cursive;
+    font-size:38px;
+    color:#d55786;
+}
+
+.tapText{
+    margin-top:8px;
+    color:#999;
+    font-size:14px;
+}
+
+.gift{
+    margin-top:30px;
+    width:125px;
+    height:110px;
+    position:relative;
+    cursor:pointer;
+    animation:giftShake 1.4s infinite ease-in-out;
+}
+
+@keyframes giftShake{
+    0%,100%{
+        transform:rotate(0);
+    }
+    25%{
+        transform:rotate(-4deg);
+    }
+    75%{
+        transform:rotate(4deg);
+    }
+}
+
+.giftBox{
+    position:absolute;
+    bottom:0;
+    left:5px;
+    width:115px;
+    height:80px;
+    background:#f58aad;
+    border-radius:6px;
+}
+
+.giftRibbonV{
+    position:absolute;
+    width:18px;
+    height:80px;
+    background:#fff1a9;
+    left:48px;
+    bottom:0;
+}
+
+.giftLid{
+    position:absolute;
+    left:0;
+    top:18px;
+    width:125px;
+    height:27px;
+    background:#ee6f9b;
+    border-radius:5px;
+    z-index:3;
+}
+
+.giftRibbonH{
+    position:absolute;
+    left:52px;
+    top:18px;
+    width:20px;
+    height:27px;
+    background:#fff1a9;
+    z-index:4;
+}
+
+.giftBow1,
+.giftBow2{
+    position:absolute;
+    width:43px;
+    height:27px;
+    background:#fff1a9;
+    top:0;
+    border-radius:50%;
+}
+
+.giftBow1{
+    left:23px;
+    transform:rotate(25deg);
+}
+
+.giftBow2{
+    right:23px;
+    transform:rotate(-25deg);
+}
+
+/* final surprise */
+
+.surpriseScene{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at center,#fff,#ffe0eb 65%,#ffd0df);
+    z-index:100;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.surpriseScene.show{
+    display:flex;
+    animation:sceneIn .8s ease;
+}
+
+@keyframes sceneIn{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* confetti */
+
+.fallingConfetti{
+    position:fixed;
+    top:-40px;
+    z-index:110;
+    animation:fallDown linear forwards;
+}
+
+@keyframes fallDown{
+    to{
+        transform:translateY(110vh) rotate(800deg);
+    }
+}
+
+/* dancing teddies */
+
+.dancingTeddies{
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:35px;
+    margin-top:30px;
+}
+
+.teddyDance{
+    position:relative;
+    width:105px;
+    height:145px;
+    animation:dance .7s infinite alternate ease-in-out;
+}
+
+@keyframes dance{
+    from{
+        transform:rotate(-8deg) translateY(0);
+    }
+    to{
+        transform:rotate(8deg) translateY(-12px);
+    }
+}
+
+.teddyHead{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    position:absolute;
+    top:5px;
+    left:15px;
+}
+
+.teddyEar{
+    position:absolute;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    top:-7px;
+}
+
+.teddyEar.left{
+    left:-3px;
+}
+
+.teddyEar.right{
+    right:-3px;
+}
+
+.teddyEye{
+    position:absolute;
+    width:7px;
+    height:9px;
+    border-radius:50%;
+    top:32px;
+}
+
+.teddyEye.left{
+    left:22px;
+}
+
+.teddyEye.right{
+    right:22px;
+}
+
+.teddyNose{
+    position:absolute;
+    width:12px;
+    height:8px;
+    border-radius:50%;
+    top:45px;
+    left:32px;
+}
+
+.teddyBody{
+    position:absolute;
+    width:70px;
+    height:65px;
+    border-radius:45%;
+    bottom:0;
+    left:18px;
+}
+
+.teddyArm{
+    position:absolute;
+    width:18px;
+    height:50px;
+    border-radius:20px;
+    top:73px;
+}
+
+.teddyArm.left{
+    left:7px;
+    transform:rotate(25deg);
+}
+
+.teddyArm.right{
+    right:7px;
+    transform:rotate(-25deg);
+}
+
+.blackTeddy .teddyHead,
+.blackTeddy .teddyEar,
+.blackTeddy .teddyBody,
+.blackTeddy .teddyArm{
+    background:#222;
+}
+
+.blackTeddy .teddyEye,
+.blackTeddy .teddyNose{
+    background:#fff;
+}
+
+.whiteTeddy .teddyHead,
+.whiteTeddy .teddyEar,
+.whiteTeddy .teddyBody,
+.whiteTeddy .teddyArm{
+    background:#fff;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.whiteTeddy .teddyEye,
+.whiteTeddy .teddyNose{
+    background:#222;
+}
+
+.hbd{
+    position:absolute;
+    top:18%;
+    left:50%;
+    transform:translateX(-50%);
+    font-family:'Pacifico',cursive;
+    color:#df4e82;
+    font-size:52px;
+}
+
+.loveText{
+    margin-top:25px;
+    font-family:'Pacifico',cursive;
+    font-size:25px;
+    color:#d94e83;
+}
+
+.finalSurpriseText{
+    margin-top:15px;
+    color:#666;
+    font-size:15px;
+    line-height:1.6;
+    padding:0 25px;
+}
+
+.finalSurpriseText b{
+    color:#d94e83;
+}
+
+/* mobile */
+@media(max-width:360px){
+
+    .page1Title{
+        font-size:34px;
+    }
+
+    .balloon{
+        width:72px;
+        height:94px;
+    }
+
+    .balloonArea{
+        height:430px;
+    }
+
+    .messageBubble{
+        max-width:125px;
+        font-size:12px;
+    }
+
+    .birthdayText{
+        font-size:37px;
+    }
+
+    .name{
+        font-size:40px;
+    }
+
+    .hbd{
+        font-size:43px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="floatingHearts" id="floatingHearts"></div>
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section class="page active" id="page1">
+
+<div class="inner">
+
+    <div class="messageHeading">
+        A Message From My Heart
+    </div>
+
+    <div class="page1Content">
+
+        <div class="page1Title">
+            Happy Birthday<br>
+            Nafisha 🎀
+        </div>
+
+        <div class="duduSticker">
+
+            <div class="dudu">
+
+                <div class="bear duduBear">
+
+                    <span class="ear left"></span>
+                    <span class="ear right"></span>
+
+                    <span class="eye left"></span>
+                    <span class="eye right"></span>
+
+                    <span class="nose"></span>
+
+                </div>
+
+                <div class="bear bubuBear">
+
+                    <span class="ear left"></span>
+                    <span class="ear right"></span>
+
+                    <span class="eye left"></span>
+                    <span class="eye right"></span>
+
+                    <span class="nose"></span>
+
+                </div>
+
+                <div class="duduText">
+                    Happy Birthday 🎂
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="excited">
+            Are you excited for what's next? ✨
+        </div>
+
+        <div class="yesNo">
+
+            <button onclick="goBalloons()">
+                YES 💗
+            </button>
+
+            <button class="no" onclick="noClick()">
+                NO 🙈
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section class="page" id="page2">
+
+<div class="inner">
+
+    <div class="messageHeading">
+        A Message From My Heart
+    </div>
+
+    <div class="balloonTitle">
+        Pop Up Balloon 🎈
+    </div>
+
+    <div class="balloonArea">
+
+        <div class="balloon balloon1"
+             onclick="popBalloon(this,0)">
+            <span class="shine"></span>
+        </div>
+
+        <div class="balloon balloon2"
+             onclick="popBalloon(this,1)">
+            <span class="shine"></span>
+        </div>
+
+        <div class="balloon balloon3"
+             onclick="popBalloon(this,2)">
+            <span class="shine"></span>
+        </div>
+
+        <div class="balloon balloon4"
+             onclick="popBalloon(this,3)">
+            <span class="shine"></span>
+        </div>
+
+        <div class="doubleWord" id="doubleWord">
+        </div>
+
+    </div>
+
+    <div class="balloonCounter" id="balloonCounter">
+        0 / 4 balloons popped
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 3
+===================================================== -->
+
+<section class="page" id="page3">
+
+<div class="inner">
+
+    <div class="messageHeading" style="color:#ffd8e5;">
+        A Message From My Heart
+    </div>
+
+    <div class="candleContent">
+
+        <div class="candleTop">
+            Nafisha, make a wish... 🎂
+        </div>
+
+        <div class="candleCake">
+
+            <div class="cakeBottom"></div>
+            <div class="cakeTop"></div>
+            <div class="cakeCream"></div>
+
+            <div class="candleStick"></div>
+            <div class="flame" id="flame"></div>
+
+        </div>
+
+        <div class="blowText">
+            The cake is waiting for you. 🤍
+        </div>
+
+        <button class="blowButton" onclick="blowCandle()">
+            Blow Candle 🕯️
+        </button>
+
+        <div class="wishText" id="wishText">
+            Close your eyes & make a wish ✨
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 4
+===================================================== -->
+
+<section class="page" id="page4">
+
+<div class="inner">
+
+    <div class="messageHeading">
+        A Message From My Heart
+    </div>
+
+    <div class="bouquet">
+        🌹💐🌹
+    </div>
+
+    <div class="messageBubble m1">
+        First & forever yours 🤍
+    </div>
+
+    <div class="messageBubble m2">
+        You make my world beautiful ✨
+    </div>
+
+    <div class="messageBubble m3">
+        You are my sunshine ☀️
+    </div>
+
+    <div class="messageBubble m4">
+        Happy Birthday Nafisha 🎂
+    </div>
+
+    <div class="messageBubble m5">
+        I am lucky to have you 💗
+    </div>
+
+    <div class="messageBubble m6">
+        You are my favourite person 🌸
+    </div>
+
+    <button class="continueBtn" onclick="goLetter()">
+        Continue ✨
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 5
+===================================================== -->
+
+<section class="page" id="page5">
+
+<div class="inner letterPage">
+
+    <div class="messageHeading">
+        A Message From My Heart
+    </div>
+
+    <div class="letterTitle">
+        Dear Nafisha 💗
+    </div>
+
+    <div class="letterCard">
+
+        <div class="dear">
+            Dear Nafisha,
+        </div>
+
+        <br>
+
+        Happy Birthday to someone truly special 🎂
+
+        <br><br>
+
+        You are sweet, loyal, my rock, and I’m so grateful
+        to have you in my life.
+
+        <br><br>
+
+        You bring so much warmth and sweetness into my life.
+        Every moment with you is precious.
+
+        <br><br>
+
+        On your special day, I wish you all the happiness,
+        love, and joy that you deserve.
+
+        <br><br>
+
+        May this year bring you countless beautiful moments
+        and wonderful memories.
+
+        <br><br>
+
+        Here's to celebrating you today and always. ✨
+
+        <br><br>
+
+        With love and best wishes,
+
+        <br>
+
+        <b>Your Special Someone 🤍</b>
+
+    </div>
+
+    <div class="teddy">
+        🧸🎀🧸
+    </div>
+
+    <button class="surpriseButton" onclick="goLastSurprise()">
+        One Last Surprise 💝
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 6
+===================================================== -->
+
+<section class="page" id="page6">
+
+<div class="inner">
+
+    <div class="messageHeading">
+        A Message From My Heart
+    </div>
+
+    <div class="lastContent">
+
+        <div class="lastTitle">
+            One Last Thing ✨
+        </div>
+
+        <div class="tapText">
+            Tap to open your final surprise
+        </div>
+
+        <div class="gift" onclick="openGift()">
+
+            <div class="giftBow1"></div>
+            <div class="giftBow2"></div>
+
+            <div class="giftLid"></div>
+            <div class="giftRibbonH"></div>
+
+            <div class="giftBox"></div>
+            <div class="giftRibbonV"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL SURPRISE
+===================================================== -->
+
+<div class="surpriseScene" id="surpriseScene">
+
+    <div class="hbd">
+        HBD 🎂
+    </div>
+
+    <div class="dancingTeddies">
+
+        <div class="teddyDance blackTeddy">
+
+            <div class="teddyHead">
+
+                <div class="teddyEar left"></div>
+                <div class="teddyEar right"></div>
+
+                <div class="teddyEye left"></div>
+                <div class="teddyEye right"></div>
+
+                <div class="teddyNose"></div>
+
+            </div>
+
+            <div class="teddyBody"></div>
+
+            <div class="teddyArm left"></div>
+            <div class="teddyArm right"></div>
+
+        </div>
+
+
+        <div class="teddyDance whiteTeddy">
+
+            <div class="teddyHead">
+
+                <div class="teddyEar left"></div>
+                <div class="teddyEar right"></div>
+
+                <div class="teddyEye left"></div>
+                <div class="teddyEye right"></div>
+
+                <div class="teddyNose"></div>
+
+            </div>
+
+            <div class="teddyBody"></div>
+
+            <div class="teddyArm left"></div>
+            <div class="teddyArm right"></div>
+
+        </div>
+
+    </div>
+
+    <div class="loveText">
+        Lots of love you ❤️
+    </div>
+
+    <div class="finalSurpriseText">
+
+        Once again, <b>Happy Birthday Nafisha! 🎂</b>
+
+        <br>
+
+        I hope you loved your surprise. 💗
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   PAGE SWITCH
+===================================================== */
+
+function switchPage(current,next){
+
+    document.getElementById(current)
+        .classList.remove("active");
+
+    setTimeout(()=>{
+
+        document.getElementById(next)
+            .classList.add("active");
+
+    },250);
+}
+
+
+/* =====================================================
+   FIRST PAGE
+===================================================== */
+
+function goBalloons(){
+
+    switchPage("page1","page2");
+
+    createHearts(12);
+}
+
+function noClick(){
+
+    const no =
+        document.querySelector(".yesNo .no");
+
+    no.innerText="YES 😭";
+
+    no.classList.remove("no");
+
+    no.onclick=goBalloons;
+}
+
+
+/* =====================================================
+   BALLOONS
+===================================================== */
+
+const balloonWords=[
+    "(you)",
+    "(are)",
+    "(so)",
+    "(special)"
+];
+
+let popped=0;
+
+function popBalloon(balloon,index){
+
+    if(balloon.classList.contains("pop"))
+        return;
+
+    balloon.classList.add("pop");
+
+    popped++;
+
+    const word =
+        document.getElementById("doubleWord");
+
+    word.classList.remove("show");
+
+    setTimeout(()=>{
+
+        word.innerHTML =
+            balloonWords[index] + "<br>" +
+            balloonWords[index];
+
+        word.classList.add("show");
+
+    },180);
+
+    document.getElementById("balloonCounter")
+        .innerText =
+        popped + " / 4 balloons popped";
+
+    createHearts(7);
+
+    if(popped===4){
+
+        setTimeout(()=>{
+
+            switchPage("page2","page3");
+
+        },1700);
+
+    }
+}
+
+
+/* =====================================================
+   CANDLE
+===================================================== */
+
+function blowCandle(){
+
+    document.getElementById("flame")
+        .classList.add("off");
+
+    document.querySelector(".blowButton")
+        .style.display="none";
+
+    document.getElementById("wishText")
+        .classList.add("show");
+
+    createHearts(18);
+
+    setTimeout(()=>{
+
+        switchPage("page3","page4");
+
+    },3000);
+}
+
+
+/* =====================================================
+   SIX MESSAGES PAGE
+===================================================== */
+
+function goLetter(){
+
+    switchPage("page4","page5");
+
+    createHearts(15);
+}
+
+
+/* =====================================================
+   LETTER -> LAST SURPRISE
+===================================================== */
+
+function goLastSurprise(){
+
+    switchPage("page5","page6");
+
+    createHearts(12);
+}
+
+
+/* =====================================================
+   OPEN GIFT
+===================================================== */
+
+function openGift(){
+
+    const gift =
+        document.querySelector(".gift");
+
+    gift.style.animation="giftOpen .45s ease";
+
+    setTimeout(()=>{
+
+        document.getElementById("surpriseScene")
+            .classList.add("show");
+
+        createConfetti(180);
+
+        createHearts(35);
+
+    },650);
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createHearts(amount){
+
+    const container =
+        document.getElementById("floatingHearts");
+
+    const icons=[
+        "♡",
+        "♥",
+        "💗",
+        "💖",
+        "💕",
+        "🌸",
+        "✨"
+    ];
+
+    for(let i=0;i<amount;i++){
+
+        const heart =
+            document.createElement("div");
+
+        heart.className="heart";
+
+        heart.innerHTML =
+            icons[
+                Math.floor(
+                    Math.random()*icons.length
+                )
+            ];
+
+        heart.style.left =
+            Math.random()*100+"%";
+
+        heart.style.fontSize =
+            (12+Math.random()*18)+"px";
+
+        heart.style.animationDuration =
+            (4+Math.random()*5)+"s";
+
+        container.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },9000);
+    }
+}
+
+
+/* =====================================================
+   PARTY CONFETTI
+===================================================== */
+
+function createConfetti(amount){
+
+    const icons=[
+        "🎉",
+        "🎊",
+        "✨",
+        "💗",
+        "⭐",
+        "🎀",
+        "●",
+        "◆"
+    ];
+
+    for(let i=0;i<amount;i++){
+
+        const piece =
+            document.createElement("div");
+
+        piece.className="fallingConfetti";
+
+        piece.innerHTML =
+            icons[
+                Math.floor(
+                    Math.random()*icons.length
+                )
+            ];
+
+        piece.style.left =
+            Math.random()*100+"vw";
+
+        piece.style.fontSize =
+            (10+Math.random()*18)+"px";
+
+        piece.style.animationDuration =
+            (3+Math.random()*5)+"s";
+
+        piece.style.animationDelay =
+            Math.random()*2+"s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+            piece.remove();
+        },9000);
+    }
+}
+
+
+/* background hearts */
+setInterval(()=>{
+    createHearts(1);
+},1300);
+
+
+/* initial hearts */
+setTimeout(()=>{
+    createHearts(10);
+},500);
+
+</script>
+
+</body>
+</html>
